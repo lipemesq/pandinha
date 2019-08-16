@@ -16,6 +16,8 @@ class MapaViewController: UIViewController {
     fileprivate let locationManager : CLLocationManager = CLLocationManager()
     
     override func viewDidLoad() {
+        
+        //xcv,xkjhvjkdshfdshfo
         super.viewDidLoad()
 
         // Configura a gerenciador de localização

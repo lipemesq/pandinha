@@ -25,7 +25,7 @@ class SegundoMapaViewController: UIViewController {
         } else {
             // Do something to let users know why they need to turn it on.
             
-            let alerta = UIAlertController(title: "Pode nos deixar usar sua localização?", message: "Para podermos te colocar no map", preferredStyle: .alert)
+            let alerta = UIAlertController(title: "Pode nos deixar usar sua localização?", message: "Para podermos te  no map", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: nil))
             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
