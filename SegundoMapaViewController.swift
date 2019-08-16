@@ -16,7 +16,6 @@ class SegundoMapaViewController: UIViewController {
     
     let locationManager = CLLocationManager()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
