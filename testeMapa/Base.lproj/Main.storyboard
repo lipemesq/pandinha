@@ -1,24 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mapa View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MapaViewController" customModule="testeMapa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" pitchEnabled="NO" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zej-Nx-xSh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Zej-Nx-xSh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="API-Pd-vNA"/>
+                            <constraint firstAttribute="trailing" secondItem="Zej-Nx-xSh" secondAttribute="trailing" id="f4C-nd-m2w"/>
+                            <constraint firstItem="Zej-Nx-xSh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="oMg-Sm-QLV"/>
+                            <constraint firstAttribute="bottom" secondItem="Zej-Nx-xSh" secondAttribute="bottom" id="pSM-13-adB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="_mapa" destination="Zej-Nx-xSh" id="Nkb-y2-plc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Segundo Mapa View Controller-->
+        <scene sceneID="qop-89-ttX">
+            <objects>
+                <viewController id="Y0F-rD-tPx" customClass="SegundoMapaViewController" customModule="testeMapa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HmK-sq-qE1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="h8T-md-a9a">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cIG-wL-FAL" firstAttribute="trailing" secondItem="h8T-md-a9a" secondAttribute="trailing" id="CM1-zL-Omn"/>
+                            <constraint firstItem="cIG-wL-FAL" firstAttribute="bottom" secondItem="h8T-md-a9a" secondAttribute="bottom" id="LW6-7T-avJ"/>
+                            <constraint firstItem="h8T-md-a9a" firstAttribute="top" secondItem="cIG-wL-FAL" secondAttribute="top" id="U1U-LN-FWW"/>
+                            <constraint firstItem="h8T-md-a9a" firstAttribute="leading" secondItem="cIG-wL-FAL" secondAttribute="leading" id="veA-o7-1tF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cIG-wL-FAL"/>
+                    </view>
+                    <connections>
+                        <outlet property="_mapa" destination="h8T-md-a9a" id="zP8-iN-jIY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CGN-1F-USK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1058" y="123"/>
         </scene>
     </scenes>
 </document>
